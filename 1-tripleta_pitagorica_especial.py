@@ -14,18 +14,19 @@ if __name__ == "__main__":
         prod = 0
         for i in range(3, 500):
             c = i*i
-        for j in range(4, 500):
-            b = j*j
-        for k in range(5, 500):
-            a = k*k
-        suma = b + a
-        if suma == c:
-                if i + k + j == 1000:
-                    prod = i*k*j
-                    print(("Los numeros son {:d}, {:d} y {:d} y su suma " +
-                           "es {:d}").format(k, j, i, (i + j + k)))
-                    print(("El producto de esta tripleta pitagorica es {:d}").
-                          format(prod))
-                    return(0)
+            for j in range(4, 500):
+                b = j*j
+                for k in range(5, 500):
+                    a = k*k
+                    suma = b + a
+                    if suma == c:
+                        if i + k + j == 1000:
+                            prod = i*k*j
+                            print(("Los numeros son {:d}, {:d} y {:d}" +
+                                   " y su suma es {:d}").
+                                  format(k, j, i, (i + j + k)))
+                            print(("El producto de esta tripleta pitagorica" +
+                                   "es {:d}").format(prod))
+                            return(0)
 
     euler()
